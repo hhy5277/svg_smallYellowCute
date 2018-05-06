@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>page1</title>
+    <style>
+        svg{
+            display: block;
+            margin: 60px auto;
+        }
+        #dax{
+            stroke-dasharray:2000;
+            -webkit-animation:4s dong forwards;
+        }
+        @keyframes dong{
+            0%{
+                stroke-dashoffset:2000;
+            }
+            99%{
+                stroke-dashoffset:0;
+            }
+            100%{
+                stroke:#fff;
+                fill:red;
+                transition:4s;
+            }
+        }
+        .svg_2{
+            stroke-dasharray:2000;
+            animation:flash .6s .6s infinite;
+            -webkit-animation:flash .6s .6s infinite;
+        }
+        .svg_3{
+            stroke-dasharray:2000;
+            animation:flash .6s 1s infinite;
+            -webkit-animation:flash .6s 1s infinite;
+        }
+        .svg_4{
+            stroke-dasharray:2000;
+            animation:flash .6s 1.4s infinite;
+            -webkit-animation:flash .6s 1.4s infinite;
+        }
+        .svg_5{
+            stroke-dasharray:2000;
+            animation:flash .6s 1.6s infinite;
+            -webkit-animation:flash .6s 1.6s infinite;
+        }
+        .svg_6{
+            stroke-dasharray:2000;
+            animation:flash .6s 1.8s infinite;
+            -webkit-animation:flash .6s 1.8s infinite;
+        }
+        .svg_7{
+            stroke-dasharray:2000;
+            animation:flash .6s 2.2s infinite;
+            -webkit-animation:flash .6s 2.2s infinite;
+        }
+        .svg_8{
+            stroke-dasharray:2000;
+            animation:flash .6s 2.6s infinite;
+            -webkit-animation:flash .6s 2.6s infinite;
+        }
+        .svg_9{
+            stroke-dasharray:2000;
+            animation:flash .6s 2.8s infinite;
+            -webkit-animation:flash .6s 2.8s infinite;
+        }
+
+    </style>
+    <link rel="stylesheet" href="css/animate.css" />
+</head>
+<body>
+
+<svg width="580" height="400" xmlns="http://www.w3.org/2000/svg">
+
+    <path id="dax" d="m289.202755,135.922107c56.89674,-163.228294 279.820033,0 0,209.864949c-279.820033,-209.864949 -56.89674,-373.093243 0,-209.864949z" stroke-width="1.5" fill="none" stroke="#000">
+    <animateTransform
+            attributeName="transform"
+            begin="2s"
+            dur="1.4s"
+            type="scale"
+            from=".8"
+            to="1"
+            repeatCount="indefinite"
+    />
+    </path>
+
+    <path class="svg_2" d="m80.651744,38.858393c5.147096,-14.76626 25.313589,0 0,18.985191c-25.313589,-18.985191 -5.147096,-33.751451 0,-18.985191z" stroke-opacity="null" stroke-width="1.5" fill="green"></path>
+
+    <path class="svg_3" d="m533.397764,125.912908c5.565995,-15.96802 27.373748,0 0,20.530311c-27.373748,-20.530311 -5.565995,-36.498331 0,-20.530311z" stroke-opacity="null" stroke-width="1.5" fill="#ff00d4"/>
+
+    <path class="svg_4" d="m70.242732,177.349194c7.009018,-20.107838 34.470579,0 0,25.852934c-34.470579,-25.852934 -7.009018,-45.960772 0,-25.852934z" stroke-opacity="null" stroke-width="1.5" fill="#559E84"/>
+
+    <path class="svg_5" d="m114.749719,356.944935c7.41182,-21.263417 36.451572,0 0,27.338679c-36.451572,-27.338679 -7.41182,-48.602097 0,-27.338679z" stroke-opacity="null" stroke-width="1.5" fill="#894F3F"/>
+
+    <path class="svg_6" d="m495.102737,350.992403c6.596721,-18.92502 32.442891,0 0,24.332168c-32.442891,-24.332168 -6.596721,-43.257188 0,-24.332168z" stroke-opacity="null" stroke-width="1.5" fill="#3f7f00"/>
+
+    <path class="svg_7" d="m367.204291,19.986023c4.323561,-12.40366 21.263417,0 0,15.947562c-21.263417,-15.947562 -4.323561,-28.351222 0,-15.947562z" stroke-opacity="null" stroke-width="1.5" fill="#00ffbb"/>
+
+    <path class="svg_8" d="m565.717744,26.716593c4.122951,-11.828139 20.27681,0 0,15.207607c-20.27681,-15.207607 -4.122951,-27.035746 0,-15.207607z" stroke-opacity="null" stroke-width="1.5" fill="#faff00"/>
+
+    <path class="svg_9" d="m437.349961,266.505429c4.117677,-11.813007 20.250868,0 0,15.188151c-20.250868,-15.188151 -4.117677,-27.001158 0,-15.188151z" stroke-opacity="null" stroke-width="1.5" fill="#21ff00"/>
+
+</svg>
+
+
+<script src="js/jquery-2.1.3.min.js"></script>
+</body>
+</html>

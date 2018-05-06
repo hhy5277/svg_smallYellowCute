@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>page1</title>
+    <style>
+     html,body,svg{
+         width:1000px;
+         height:1000px;
+         background-color: #000;
+     }
+    </style>
+    <link rel="stylesheet" href="css/animate.css" />
+</head>
+<body>
+<!--stroke="url(#grad1)"-->
+<svg xmlns="http://www.w3.org/2000/svg">
+    <!--预兆闪电-->
+    <ellipse cx="670" cy="506" rx="60" ry="20" style="fill:yellow;stroke:yellow;stroke-width:6;opacity: 0">
+        <animate attributeType="XML" attributeName="opacity" from="0" to=".6" begin=".1s"
+        dur="1s" repeatCount="3" />
+    </ellipse>
+
+    <!--顶圆-->
+    <clipPath id="myClip">
+   <circle cx="680" cy="420" r="60"  stroke="url(#grad1)" fill="#f9f9f9" stroke-width="6"></circle>
+    <defs>
+        <linearGradient id="grad1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0.15" stop-color="#b1e337"/>
+            <stop offset="0.2" stop-color="#f65eb1"/>
+            <stop offset="0.4" stop-color="#eb221a"/>
+            <stop offset="0.6" stop-color="#fbef46"/>
+            <stop offset="0.8" stop-color="#6dc40d"/>
+            <stop offset="0.9" stop-color="#36f1ee"/>
+        </linearGradient>
+    </defs>
+    </clipPath>
+        <circle cx="680" cy="440" r="54" fill="#f9f9f9" stroke="url(#grad1)" stroke-width="6" clip-path="url(#myClip)"></circle>
+
+    <!--左圆-->
+    <clipPath id="myClip_lef">
+    <circle cx="620" cy="470" r="50"  stroke="url(#grad_lef)" fill="#f9f9f9" stroke-width="6"></circle>
+    <defs>
+        <linearGradient id="grad_lef" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#f7332b"/>
+            <stop offset="0.1" stop-color="#f65eb1"/>
+            <stop offset="0.2" stop-color="#f0c838"/>
+            <stop offset="0.3" stop-color="#f8f72b"/>
+            <stop offset="0.4" stop-color="#b8ef1e"/>
+            <stop offset="0.6" stop-color="#31b19f"/>
+            <stop offset="0.8" stop-color="#3765dd"/>
+            <stop offset="1" stop-color="#e2c8fd"/>
+        </linearGradient>
+    </defs>
+    </clipPath>
+    <circle cx="634" cy="467" r="50"  stroke="url(#grad_lef)" fill="#f9f9f9" stroke-width="6" clip-path="url(#myClip_lef)"></circle>
+
+    <!--右圆-->
+    <clipPath id="myClip_right">
+    <circle cx="720" cy="480" r="40"  stroke="url(#grad_right)" fill="#f9f9f9" stroke-width="6"></circle>
+    <defs>
+        <linearGradient id="grad_right" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#f7332b"/>
+            <stop offset="0.1" stop-color="#f65eb1"/>
+            <stop offset="0.2" stop-color="#f0c838"/>
+            <stop offset="0.3" stop-color="#f8f72b"/>
+            <stop offset="0.4" stop-color="#b8ef1e"/>
+            <stop offset="0.6" stop-color="#31b19f"/>
+            <stop offset="0.8" stop-color="#3765dd"/>
+            <stop offset="1" stop-color="#e2c8fd"/>
+        </linearGradient>
+    </defs>
+    </clipPath>
+    <circle cx="712" cy="476" r="40"  stroke="url(#grad_right)" fill="#f9f9f9" stroke-width="6" clip-path="url(#myClip_right)"></circle>
+
+    <!--底圆-->
+    <rect x="624" y="472" width="100" height="40" fill="#f9f9f9" stroke="none" stroke-width="6"></rect>
+
+        <defs>
+            <linearGradient id="grad_bottom" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#f7332b"/>
+                <stop offset="0.1" stop-color="#f65eb1"/>
+                <stop offset="0.2" stop-color="#f0c838"/>
+                <stop offset="0.3" stop-color="#f8f72b"/>
+                <stop offset="0.4" stop-color="#b8ef1e"/>
+                <stop offset="0.6" stop-color="#31b19f"/>
+                <stop offset="0.8" stop-color="#3765dd"/>
+                <stop offset="1" stop-color="#e2c8fd"/>
+            </linearGradient>
+        </defs>
+
+    <rect x="640" y="512" width="60" height="4" fill="url(#grad_bottom)" stroke="none" stroke-width="6"></rect>
+
+
+    <!--<circle cx="612" cy="476" r="10"  stroke="yellow" fill="yellow" stroke-width="6"></circle>-->
+
+
+    <!--闪电M624,472-->
+    <rect x="-4" y="-4" width="6" height="14" fill="yellow" opacity=".5" id="rt">
+        <animateMotion
+                path="M680,562 L560,600 L700,620 L560,680 L690,700"
+                begin="1s"
+                dur="1s"
+                rotate="auto"
+        ></animateMotion>
+
+    </rect>
+
+    <defs>
+        <linearGradient id="grad_shan" x1="0" y1="0" x2="1" y2="1">
+            <stop offset=".1" stop-color="#fff"/>
+            <stop offset=".5" stop-color="yellow"/>
+            <stop offset=".8" stop-color="#fff"/>
+            <stop offset="1" stop-color="yellow"/>
+        </linearGradient>
+    </defs>
+
+    <path d="M680,562 L560,600 L700,620 L560,680 L690,700" fill="none" stroke-width="2" stroke="url(#grad_shan)" opacity="0">
+        <animate attributeType="XML" attributeName="opacity" from="0" to="1" begin="1.1s"
+                 dur="1s" repeatCount="2"/>
+    </path>
+
+</svg>
+
+<script src="js/jquery-2.1.3.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+

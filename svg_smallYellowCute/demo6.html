@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>page1</title>
+    </head>
+    <style type="text/css" rel="stylesheet">
+
+        /*html,body{*/
+            /*margin:0;*/
+            /*padding:0;*/
+            /*width:100%;*/
+            /*height:100%;*/
+            /*background: #001122;*/
+        /*}*/
+        /*circle {*/
+            /*-webkit-transition: stroke-dasharray .25s;*/
+            /*transition: stroke-dasharray .25s;*/
+        /*}*/
+
+        /*div i {*/
+              /*width: 150px;*/
+              /*height: 150px;*/
+              /*border-radius: 50%;*/
+              /*background-color: #beceeb;*/
+              /*position: absolute;*/
+          /*}*/
+        /*div span{*/
+            /*width: 150px;*/
+            /*height: 150px;*/
+            /*border-radius: 50%;*/
+            /*background-color: #beceeb;*/
+            /*position: absolute;*/
+            /*top:100px;*/
+            /*left:40px;*/
+        /*}*/
+
+        /*.share {*/
+            /*display: inline-block;*/
+            /*width: 64px;*/
+            /*height:64px;*/
+            /*text-align: center;*/
+            /*line-height: 64px;*/
+            /*background-color: #cd0000;*/
+            /*color: #fff;*/
+            /*border-radius: 50%;*/
+        /*}*/
+        /*[type="checkbox"] {*/
+            /*position: absolute;*/
+            /*clip: rect(0 0 0 0);*/
+        /*}*/
+        /*[class*="icon-share-"] {*/
+            /*position: absolute;*/
+            /*width: 48px;*/
+            /*height: 48px;*/
+            /*line-height: 48px;*/
+            /*text-align: center;*/
+            /*background-color: #cd0000;*/
+            /*border-radius: 50%;*/
+            /*transition: transform .5s;*/
+            /*transform: scale(0.5);*/
+        /*}*/
+        /*:checked + .target .icon-share-weibo {*/
+            /*transform: scale(1) translate(-70px, 60px);*/
+        /*}*/
+        /*:checked + .target .icon-share-wechat {*/
+            /*transform: scale(1) translate(0, 75px);*/
+        /*}*/
+        /*:checked + .target .icon-share-qq {*/
+            /*transform: scale(1) translate(70px, 60px);*/
+        /*}*/
+        /*:checked + .target .share {*/
+            /*animation: jello 1s;*/
+        /*}*/
+        image {
+        width: 256px;
+        height: 256px;
+        -webkit-mask-image: url(./imgs/dot.png);
+        mask-image: url(./imgs/dot.png);
+        }
+    </style>
+    <body>
+    <!--<div class="loadwrap" style="display:block;">-->
+    <!--<svg width="340" height="340" viewBox="0 0 340 340" preserveAspectRatio="xMidYMid slice">-->
+        <!--矩形-->
+       <!--<rect x="10" y="10" rx="10" ry="10" width="150" height="100" stroke="red" fill="none">-->
+       <!--</rect>-->
+        <!--圆形-->
+        <!--<circle cx="250" cy="60" r="50" stroke="green" fill="none">-->
+        <!--</circle>-->
+        <!--椭圆-->
+        <!--<ellipse cx="150" cy="80" rx="100" ry="50"-->
+                 <!--style="fill:yellow;stroke:purple;stroke-width:2"></ellipse>-->
+        <!--直线-->
+        <!--<line x1="10" y1="120" x2="460" y2="420" stroke="blue"></line>-->
+
+        <!--折线-->
+        <!--<polygon points="220,10 300,210 170,250 123,234" style="fill:blue;stroke:purple;stroke-width:1" />-->
+
+        <!--多边形-->
+        <!--<polygon points="100,10,40,180 190,60,10,60 160,180"-->
+                 <!--style="fill:yellow;stroke:purple;stroke-width:5;fill-rule:evenodd;">-->
+        <!--</polygon>-->
+
+        <!--线性渐变-->
+        <!--<defs>-->
+            <!--<linearGradient id="grad1" x1="0" y1="0" x2="1" y2="1">-->
+                <!--<stop offset="0" stop-color="#1497FC"/>-->
+                <!--<stop offset="0.5" stop-color="#A469BE"/>-->
+                <!--<stop offset="1" stop-color="#FF8C00"/>-->
+            <!--</linearGradient>-->
+        <!--</defs>-->
+
+        <!--<rect x="100" y="100" fill="url(#grad1)" width="200" height="150"></rect>-->
+
+        <!--径向渐变-->
+        <!--<defs>-->
+            <!--<radialGradient id="grad2" cx="0.5" cy="0.5" r="0.5" fx="0.8" fy="0.6">-->
+                <!--<stop offset="0" stop-color="rgb(20,151,252)"/>-->
+                <!--<stop offset="0.5" stop-color="rgb(164,105,190)"/>-->
+                <!--<stop offset="1" stop-color="rgb(255,140,0)"/>-->
+            <!--</radialGradient>-->
+        <!--</defs>-->
+
+        <!--<rect x="100" y="100" fill="url(#grad2)" width="200" height="150"></rect>-->
+
+        <!--笔刷-->
+        <!--<defs>-->
+            <!--<pattern id="p1" x="0" y="0" width="0.25" height="0.25" patternUnits="objectBoundingBox" patternContentUnits="objectBoundingBox">-->
+                <!--<circle cx="0.1" cy="0.1" r="0.1" fill="red"></circle>-->
+                <!--<polygon points="30 10 60 50 0 50" fill="green"></polygon>-->
+            <!--</pattern>-->
+        <!--</defs>-->
+        <!--<rect x="100" y="100" width="800" height="300" fill="url(#p1)" stroke="blue"></rect>-->
+
+        <!--path路径-->
+        <!--<path d="M150 0 L75 200 L225 200 Z" />-->
+        <!--<path d="M200 200 A200 100 100 10 68 300 300" stroke="red"/>-->
+
+        <!--贝塞尔曲线-->
+        <!--<path d="M130 110 C 120 140, 180 140, 170 110" stroke="3" fill="none" stroke="red"/>-->
+<!-- dx="10,10,10,10,10,10" dy="10,10,10,10,10,10"-->
+
+        <!--文本-->
+        <!--<text x="100" y="100" dx="10,10,10,10,10,10" style="font-size: 14px;">-->
+            <!--<tspan fill="red" dy="-20,20">AB</tspan>-->
+            <!--<tspan stroke="#c8c8c8" stroke-width="2" fill="none" dy="-10,-20,-30">CDE</tspan>-->
+        <!--</text>-->
+        <!--<path d="M100,0 V200 M0,100 H200" stroke="red"/>-->
+
+        <!--文本路径设置-->
+        <!--<path id="path1" d="M100,400 A400,300,0,0,0,500,400" stroke="rgb(0,255,0)" fill="none"/>-->
+        <!--<text text-anchor="middle" x="100" y="100">-->
+            <!--<textPath xlink:href="#path1" startOffset="50%">-->
+                 <!--hello world!hello world!-->
+            <!--</textPath>-->
+        <!--</text>-->
+
+
+        <!--塔-->
+        <!--<g id="light-tower">-->
+            <!--<defs>-->
+                <!--<linearGradient id="tower" x1="0" y1="0" x2="1" y2="0">-->
+                     <!--<stop offset="0" stop-color="#999"></stop>-->
+                    <!--<stop offset="1" stop-color="#333"></stop>-->
+                <!--</linearGradient>-->
+            <!--</defs>-->
+            <!--<polygon points="0 0 50 -5 50 10" fill="url(#tower)"></polygon>-->
+        <!--</g>-->
+
+        <!--使用use标签创建图形引用-->
+        <!--<g id="shape3">-->
+            <!--<rect x="100" y="100" width="50" height="50" />-->
+        <!--</g>-->
+
+        <!--<use xlink:href="#shape3" x="100" y="50" style="fill: #00ff00;"/>-->
+        <!--<use xlink:href="#shape3" x="200" y="50" style="stroke: #00ff00; fill: none;"/>-->
+
+        <!--使用use标签创建图形引用-->
+        <!--<symbol id="shape2">-->
+            <!--<circle cx="25" cy="25" r="25" style="fill:#bf55ec;"/>-->
+        <!--</symbol>-->
+
+        <!--<use xlink:href="#shape2" x="50" y="25" />-->
+        <!--<use xlink:href="#shape2" x="200" y="25" />-->
+
+        <!--<polygon points="5,0 10,10 0,10" style="stroke: white;fill: red;"/>-->
+
+        <!--pattern使用-->
+        <!--<defs>-->
+            <!--<pattern id="Triangle" width="10" height="10" patternUnits="userSpaceOnUse">-->
+                <!--<polygon points="5,0 10,10 0,10" style="stroke: white;fill: red;"/>-->
+            <!--</pattern>-->
+        <!--</defs>-->
+
+        <!--<circle cx="10" cy="160" r="50" fill="url(#Triangle)"/>-->
+
+        <!--marker使用-->
+        <!--<defs>-->
+            <!--<marker id="Triangle" viewBox="0 0 10 10" refX="1" refY="5"-->
+                    <!--markerWidth="4" markerHeight="4" orient="auto">-->
+                <!--<path d="M 0 0 L 10 5 L 0 10 z" fill="white"/>-->
+            <!--</marker>-->
+        <!--</defs>-->
+
+        <!--<polyline points="30,80 40,50 90,30" fill="none" stroke="white"-->
+                  <!--stroke-width="2" marker-end="url(#Triangle)" />-->
+
+        <!--使用mask-->
+        <!--<defs>-->
+            <!--<mask id="myMask" maskUnits="userSpaceOnUse"-->
+                  <!--x="0" y="0" width="200" height="80">-->
+                <!--<rect x="0" y="0" width="90" height="80" fill="white"/>-->
+            <!--</mask>-->
+
+            <!--<text id="Text" x="100" y="48" font-size="26" font-weight="bold"-->
+                  <!--text-anchor="middle">-->
+                <!--Black & White-->
+            <!--</text>-->
+        <!--</defs>-->
+
+        <!--<rect x="116" y="20" width="75" height="40" fill="none" stroke="skyblue"/>-->
+
+        <!--<use xlink:href="#Text" fill="green"/>-->
+        <!--<use xlink:href="#Text" fill="blue" stroke="red" mask="url(#myMask)"/>-->
+
+
+        <!--switch-->
+        <!--<switch>-->
+            <!--<text systemLanguage="ar">مرحبا</text>-->
+            <!--<text systemLanguage="de,nl">Hallo!</text> -->
+            <!--<text systemLanguage="en">Hello!</text>-->
+            <!--<text systemLanguage="en-us">Howdy!</text>-->
+            <!--<text systemLanguage="en-gb">Wotcha!</text>-->
+            <!--<text systemLanguage="en-au">G'day!</text>-->
+            <!--<text systemLanguage="es">Hola!</text>-->
+            <!--<text systemLanguage="fr">Bonjour!</text>-->
+            <!--<text systemLanguage="ja">こんにちは</text>-->
+            <!--<text>7788</text>-->
+        <!--</switch>-->
+
+        <!--symbol-->
+        <!--<symbol id="sym02" viewBox="0 0 150 110">-->
+            <!--<circle cx="50" cy="50" r="40" stroke-width="8" style="stroke: red;fill: red;"/>-->
+            <!--<circle cx="90" cy="60" r="40" stroke-width="8" stroke="green" fill="white"/>-->
+        <!--</symbol>-->
+
+        <!--<use xlink:href="#sym02" x="0" y="0" width="100" height="50"/>-->
+        <!--<use xlink:href="#sym02" x="0" y="50" width="75" height="38"/>-->
+        <!--<use xlink:href="#sym02" x="0" y="100" width="50" height="25"/>-->
+
+        <!--a链接-->
+        <!--<a xlink:href="https://www.baidu.com/?tn=90467086_hao_pg" target="_blank">-->
+            <!--<rect height="30" width="120" y="0" x="0" rx="15"/>-->
+            <!--<text fill="white" text-anchor="middle" y="21" x="60">SVG on MDN</text>-->
+        <!--</a>-->
+
+        <!--<text x="0" y="35"  font-family="Verdana" font-size="35">-->
+            <!--Hello, out there-->
+        <!--</text>-->
+
+        <!--<text x="0" y="80" transform="rotate(30,20,30),scale(1.4)">-->
+            <!--SVG Text Rotation example-->
+        <!--</text>-->
+
+        <!--<text x="10" y="40" style="font-family: 'Times New Roman';font-size: 44px;stroke: #00ff00;fill: #0000ff;">-->
+            <!--SVG text styling-->
+        <!--</text>-->
+
+        <!--星星-->
+        <!--<defs>-->
+        <!--<polygon id="star" points="0 -10 2 -2 10 0 2 2 0 10 -2 2 -10 0 -2 -2" style="fill:black;stroke-width:5;fill-rule:nonzero;"></polygon>-->
+        <!--</defs>-->
+
+        <!--<g id="star-group">-->
+        <!--<use xlink:href="#star" x="200" y="50" style="fill:black;"/>-->
+        <!--<use xlink:href="#star" x="100" y="50" style="fill:black;"/>-->
+        <!--<use xlink:href="#star" x="50" y="50" style="fill:black;"/>-->
+        <!--<use xlink:href="#star" x="10" y="10" style="fill:black;"/>-->
+        <!--<use xlink:href="#star" x="6" y="6" style="fill:black;"/>-->
+        <!--</g>-->
+
+        <!--设置文本路径-->
+        <!--<defs>-->
+            <!--<path id="MyPath"-->
+                  <!--d="M 20 20-->
+             <!--C 200 100 300   0 400 100-->
+             <!--C 500 200 600 300 700 200-->
+             <!--C 800 100 900 100 900 100"/>-->
+        <!--</defs>-->
+
+        <!--<use xlink:href="#MyPath" fill="none" stroke="red"  />-->
+
+        <!--<text font-family="Verdana" font-size="28">-->
+            <!--<textPath xlink:href="#MyPath">-->
+                <!--We go up, then we go down, then up again-->
+            <!--</textPath>-->
+        <!--</text>-->
+        <!---->
+        <!--<rect x="1" y="1" width="998" height="298"-->
+              <!--fill="none" stroke="black" stroke-width="2" />-->
+
+
+        <!--设置text中的tspan-->
+        <!--<text x="15" y="30">-->
+            <!--You are-->
+            <!--<tspan fill="red" stroke="skyblue">not</tspan>-->
+            <!--a banana-->
+            <!--<tspan fill="blue" stroke="red">!!!</tspan>-->
+        <!--</text>-->
+
+
+        <!--animate动画 indefinite循环 forwards一次-->
+        <!--<rect x="10" y="10" width="100" height="100">-->
+            <!--<animate attributeType="XML" attributeName="x" from="100" to="120"-->
+                     <!--dur="2s" repeatCount="forwards"/>-->
+        <!--</rect>-->
+
+        <!--按着路径来运动-->
+        <!--<path d="M10,110 A120,120 -45 0,1 110 10 A120,120 -45 0,1 10,110"-->
+              <!--stroke="lightgrey" stroke-width="2"-->
+              <!--fill="none" id="theMotionPath"/>-->
+        <!--<circle cx="10" cy="110" r="3" fill="lightgrey"  />-->
+        <!--<circle cx="110" cy="10" r="3" fill="lightgrey"  />-->
+
+        <!--<circle cx="" cy="" r="5" fill="red">-->
+            <!--<animateMotion dur="6s" repeatCount="indefinite">-->
+                <!--<mpath xlink:href="#theMotionPath"/>-->
+            <!--</animateMotion>-->
+        <!--</circle>-->
+
+    <!--三角形旋转-->
+    <!--<polygon points="60,30 90,90 30,90">-->
+    <!--<animateTransform attributeName="transform"-->
+    <!--attributeType="XML"-->
+    <!--type="rotate"-->
+    <!--from="0 60 70"-->
+    <!--to="360 60 70"-->
+    <!--dur="10s"-->
+    <!--repeatCount="indefinite"/>-->
+    <!--</polygon>-->
+
+
+        <!--loading-->
+            <!--<circle cx="170" cy="170" r="140" stroke-width="30" stroke="#D1D3D7" fill="none"></circle>-->
+            <!--<circle cx="170" cy="170" r="140" stroke-width="30" stroke="#00A5E0" fill="none" transform="matrix(0,-1,1,0,0,340)" stroke-dasharray="0 1069"></circle>-->
+
+    <!--</svg>-->
+
+        <!--loading-->
+            <!--<div id="caseBlanche">-->
+                <!--<div class="caseBlanche_logo">-->
+                    <!--<img src="imgs/titleD.png" />-->
+                <!--</div>-->
+
+                <!--<div id="load">-->
+                    <!--<i><span>0</span>%</i>-->
+                <!--</div>-->
+
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--<section class="shopping_index" style="display:none;" id="app">-->
+            <!--<section class="index_top">-->
+            <!--</section>-->
+        <!--</section>-->
+
+    <!--两小球相撞融合-->
+    <!--<svg width="0" height="0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">-->
+        <!--<defs>-->
+            <!--<filter id="goo">-->
+                <!--<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />-->
+                <!--<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />-->
+                <!--<feComposite in="SourceGraphic" in2="goo" operator="atop"/>-->
+            <!--</filter>-->
+        <!--</defs>-->
+    <!--</svg>-->
+
+    <!--<div class="target" filter="url(#goo)">-->
+        <!--<i id="ball1" class="ball"></i>-->
+        <!--<span id="ball2" class="ball"></span>-->
+    <!--</div>-->
+
+
+    <!--两个小球-->
+    <!--<svg width="230" height="120" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">-->
+
+        <!--<filter id="blurMe">-->
+            <!--<feGaussianBlur in="SourceGraphic" stdDeviation="5"/>-->
+        <!--</filter>-->
+
+        <!--<circle cx="60"  cy="60" r="50" fill="green" />-->
+
+        <!--<circle cx="170" cy="60" r="50" fill="green"-->
+                <!--filter="url(#blurMe)" />-->
+    <!--</svg>-->
+
+    <!--导航点击是否展示-->
+    <!--<svg width="0" height="0">-->
+        <!--<defs>-->
+            <!--<filter id="goo">-->
+                <!--<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />-->
+                <!--<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />-->
+                <!--<feComposite in="SourceGraphic" in2="goo" operator="atop"/>-->
+            <!--</filter>-->
+        <!--</defs>-->
+    <!--</svg>-->
+    <!--<input type="checkbox" id="share" />-->
+    <!--<div class="target" filter="url(#target)">-->
+        <!--<label class="share" for="share">分享</label>-->
+        <!--<span class="icon-share-weibo">No.1</span>-->
+        <!--<span class="icon-share-wechat">No.2</span>-->
+        <!--<span class="icon-share-qq">No.3</span>-->
+    <!--</div>-->
+
+    <!--两小球融合-->
+    <!--<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300">-->
+        <!--<foreignObject width="600" height="300" filter="url(#goo)">-->
+            <!--<body xmlns="http://www.w3.org/1999/xhtml">-->
+            <!--<style type="text/css">-->
+                <!--.ball {-->
+                    <!--width: 200px; height: 200px;-->
+                    <!--border-radius: 50%;-->
+                    <!--background-color: #beceeb;-->
+                    <!--display: inline-block;-->
+                <!--}-->
+            <!--</style>-->
+            <!--<i id="ball1" class="ball"></i><i id="ball2" class="ball"></i>-->
+            <!--</body>-->
+        <!--</foreignObject>-->
+    <!--</svg>-->
+
+
+    <!--<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300">-->
+        <!--<defs>-->
+            <!--<filter id="filter-ripple">-->
+                <!--<feImage xlink:href="javascript:void(0);" x="0" y="0" width="512" height="512" result="ripple"></feImage>-->
+                <!--<feDisplacementMap xChannelSelector="G" yChannelSelector="R" color-interpolation-filters="sRGB" in="SourceGraphic" in2="ripple" scale="80"></feDisplacementMap>-->
+                <!--<feComposite operator="in" in2="ripple"></feComposite>-->
+            <!--</filter>-->
+        <!--</defs>-->
+
+        <!--<circle cx="60"  cy="60" r="50" fill="green" filter="url(#filter-ripple)"/>-->
+    <!--</svg>-->
+
+    <svg class="svg-filters">
+        <defs>
+            <filter id="filter-ripple">
+                <feImage xlink:href="imgs/dot.png" x="0" y="0" width="256" height="256" result="ripple"></feImage>
+                <feDisplacementMap xChannelSelector="R" yChannelSelector="G" color-interpolation-filters="sRGB" in="SourceGraphic" in2="ripple" scale="80"></feDisplacementMap>
+                <feComposite operator="in" in2="ripple"></feComposite>
+            </filter>
+        </defs>
+    </svg>
+    <svg width="256" height="192">
+        <image xlink:href="imgs/mm1.jpg" width="256" height="192" filter="url(#filter-ripple)" class="mask-image">
+            <animate attributeType="XML" attributeName="x" from="-100" to="0"
+                     dur="4s" repeatCount="forwards"/>
+        </image>
+    </svg>
+
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script>
+        //loading
+//        var images =[],count = 0;
+//        $('html,body').find('img').each(function(i) {
+//            images[i]=$(this).attr('src');
+//        });
+//        for (var i = 0; i < images.length; i++) {
+//            img = new Image;
+//            img.src = images[i];
+//            img.onload = function() {
+//                count++;
+//                var per = Math.floor(count/images.length*100);
+//                perimeter = Math.PI * 2 * 140;
+//                var circle = document.querySelectorAll("circle")[1];
+//                circle.setAttribute('stroke-dasharray', perimeter * per + " " + perimeter * (1 - per));
+//                $('#load i span').text(per);
+//                if(count==images.length)
+//                {
+//                    setTimeout(begin,500);
+//                    function begin(){
+//                        $('.loadwrap').fadeOut(100,function(){
+//                            $('.shopping_index').show();
+//                        });
+//                    }
+//                }
+//            }
+//        };
+
+    </script>
+    <script>
+//        //use标签创建图形引用
+//        var paper=document.querySelector('svg');
+//        var SVG_NS='http://www.w3.org/2000/svg';
+//        var XLINK_NS='http://www.w3.org/1999/xLink';
+//        renderStar();
+//
+//        function use(origin) {
+//            var _use=document.createElementNS(SVG_NS,'use');
+//            _use.setAttributeNS(XLINK_NS,'xlink:href','#'+origin.id);
+//            return _use;
+//        }
+//
+////        返回最大值和最小值
+//        function random(min,max) {
+//               return min+(max-min)*Math.random();
+//        }
+//
+//        function renderStar() {
+//            var starGroup=document.getElementById('star-group');
+//            var starRef=document.getElementById('star');
+//            var starCount=500;
+//            var star;
+//            while (starCount--){
+//                star=use(starRef);
+//                star.setAttribute('fill','red');
+//                star.setAttribute('opacity',random(0.1,0.4));
+//                star.setAttribute('x',random(0,500));
+//                star.setAttribute('y',random(0,500));
+//                star.setAttribute('transform','translate('+random(-400,-400)+','+random(-300,300)+')'+'scale('+random(0.1,0.6)+')');
+//                starGroup.appendChild(star);
+//            }
+//        }
+    </script>
+
+    <!--<script>-->
+    <!--$(function () {-->
+    <!--var n=26;-->
+    <!--var x=[];-->
+    <!--var y=null;-->
+    <!--var i=n;-->
+    <!--var s=100;-->
+    <!--var w=0.02;-->
+    <!--while (i&#45;&#45;) x.push(10);-->
+
+    <!--function arrange(t) {-->
+    <!--y=[];-->
+    <!--var ly=0,cy;-->
+    <!--for(i=0;i<n;++i){-->
+    <!--cy=-s*Math.sin(w*i*20+t);-->
+    <!--y.push(cy-ly);-->
+    <!--ly=cy;-->
+    <!--}-->
+    <!--}-->
+
+    <!--function render() {-->
+    <!--sintext.setAttribute('dx',x.join(''));-->
+    <!--sintext.setAttribute('dy',x.join(''));-->
+    <!--}-->
+    <!--arrange(0);-->
+    <!--render();-->
+    <!--});-->
+    <!--</script>-->
+    </body>
+    </html>

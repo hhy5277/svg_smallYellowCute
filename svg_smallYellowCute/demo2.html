@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*,lineRun .6s 2.1s linear forwards;*/
+        #zhi{
+            animation:hid .6s .3s linear forwards,cor .6s .4s linear forwards;
+            -webkit-animation:hid .6s .3s linear forwards,cor .6s .4s linear forwards;
+        }
+        #lian{
+            animation: hid .6s .9s linear forwards,cor2 .6s 1.5s linear forwards;
+            -webkit-animation:hid .6s .9s linear forwards,cor2 .6s 1.5s linear forwards;
+        }
+        #zhao{
+            animation:hid .6s 1.5s linear forwards,cor3 .6s 2.1s linear forwards;
+            -webkit-animation:hid .6s 1.5s linear forwards,cor3 .6s 2.1s linear forwards;
+        }
+        #pin{
+            animation:hid .6s 2.1s linear forwards,cor4 .6s 2.7s linear forwards;
+            -webkit-animation:hid .6s 2.1s linear forwards,cor4 .6s 2.7s linear forwards;
+        }
+
+        @-webkit-keyframes hid{
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+        @keyframes hid{
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+        @-webkit-keyframes cor {
+            from{
+                fill: #000;
+                font-size: 14px;
+            }
+            to{
+                fill: red;
+                font-size: 20px;
+            }
+        }
+        @keyframes cor {
+            from{
+                fill: #000;
+                font-size: 14px;
+            }
+            to{
+                fill: red;
+                font-size: 20px;
+            }
+        }
+        @-webkit-keyframes cor2 {
+            from{
+                fill: #000;
+                font-size: 14px;
+            }
+            to{
+                fill: yellow;
+                font-size: 20px;
+            }
+        }
+        @keyframes cor2 {
+            from{
+                fill: #000;
+                font-size: 14px;
+            }
+            to{
+                fill: yellow;
+                font-size: 20px;
+            }
+        }
+        @-webkit-keyframes cor3 {
+            from{
+                fill: #000;
+                font-size: 14px;
+            }
+            to{
+                fill:blue;
+                font-size: 20px;
+            }
+        }
+        @keyframes cor3 {
+            from{
+                fill: #000;
+                font-size: 14px;
+            }
+            to{
+                fill:blue;
+                font-size: 20px;
+            }
+        }
+        @-webkit-keyframes cor4 {
+            from{
+                fill: #000;
+                font-size: 14px;
+            }
+            to{
+                fill:green;
+                font-size: 20px;
+            }
+        }
+        @keyframes cor4 {
+            from{
+                fill: #000;
+                font-size: 14px;
+            }
+            to{
+                fill:green;
+                font-size:20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600">
+    <path id="path1" d="M100,300 l100,0,100,0,100,0" stroke="none" fill="none"/>
+    <text text-anchor="middle" x="-120" y="0">
+        <textPath xlink:href="#path1" startOffset="50%" opacity="0" id="zhi">
+            智
+        </textPath>
+      
+    </text>
+    <text text-anchor="middle" x="-90" y="0">
+        <textPath xlink:href="#path1" startOffset="50%" opacity="0" id="lian">
+           联
+            <!--<animate attributeType="XML" attributeName="opacity" from="0" to="1" begin="1.5s" />-->
+        </textPath>
+        
+    </text>
+    <text text-anchor="middle" x="-60" y="0">
+        <textPath xlink:href="#path1" startOffset="50%" opacity="0" id="zhao">
+            招
+            <!--<animate attributeType="XML" attributeName="opacity" from="0" to="1" begin="2.1s" />-->
+        </textPath>
+      
+    </text>
+    <text text-anchor="middle" x="-30" y="0">
+        <textPath xlink:href="#path1" startOffset="50%" opacity="0" id="pin">
+            聘
+            <!--<animate attributeType="XML" attributeName="opacity" from="0" to="1" begin="2.7s" />-->
+        </textPath>
+       
+    </text>
+</svg>
+</body>
+</html>

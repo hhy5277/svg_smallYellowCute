@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body  style="background-color:#000;">
+<svg viewBox="-100 -280 900 2300" width="800" height="580" xmlns="http://www.w3.org/2000/svg">
+
+
+
+    <!--左手-->
+    <g>
+        <ellipse cx="-60" cy="956" rx="46" ry="20" style="fill:#fff;" transform="rotate(70,-178,780)"></ellipse>
+        <ellipse cx="-236" cy="1036" rx="76" ry="24" style="fill:#fff;" transform="rotate(20,-178,780)"></ellipse>
+        <ellipse cx="-446" cy="916" rx="80" ry="24" style="fill:#fff;" transform="rotate(-40,-178,780)"></ellipse>
+        <ellipse cx="-490" cy="716" rx="42" ry="28" style="fill:#fff;" transform="rotate(-90,-178,780)"></ellipse>
+        <rect x="-286" y="924" rx="100" ry="10" width="180" height="80" stroke="none" fill="yellow" transform="rotate(-20,-178,780)"/>
+        <polygon points="-380,1008 -320,1008 -320,898 -380,898" style="fill:#fff;stroke:none;stroke-width:1" transform="rotate(-28,-178,780)"/>
+        <rect x="-86" y="924" rx="130" ry="20" width="100" height="50" stroke="#000" fill="#fff" transform="rotate(50,-178,780)"/>
+    </g>
+
+    <!--右手-->
+    <g>
+        <ellipse cx="724" cy="1960" rx="46" ry="20" style="fill:#fff;" transform="rotate(-46,-178,780)"></ellipse>
+        <ellipse cx="1266" cy="1250" rx="76" ry="24" style="fill:#fff;" transform="rotate(-10,-178,780)"></ellipse>
+        <ellipse cx="1240" cy="276" rx="80" ry="24" style="fill:#fff;" transform="rotate(30,-178,780)"></ellipse>
+        <ellipse cx="790" cy="-300" rx="42" ry="28" style="fill:#fff;" transform="rotate(60,-178,780)"></ellipse>
+        <rect x="1010" y="450" rx="100" ry="10" width="180" height="80" stroke="none" fill="yellow" transform="rotate(20,-178,780)"/>
+        <polygon points="1134,196 1074,186 1074,76 1134,76" style="fill:#fff;stroke:none;stroke-width:1" transform="rotate(36,-178,780)"/>
+        <rect x="628" y="1870" rx="130" ry="20" width="100" height="50" stroke="#000" fill="#fff" transform="rotate(-44,-178,780)"/>
+    </g>
+
+    <!-- 左脚 -->
+    <g>
+        <polygon points="360,1840 460,1840 480,1720 330,1720" style="fill:rgb(36, 108, 140);stroke:purple;stroke-width:1" />
+        <circle cx="370" cy="1894" r="56" stroke="none" fill="#fff"></circle>
+        <polygon points="400,1940 460,1940 460,1840 380,1840" style="fill:#fff;stroke:none;stroke-width:1" />
+    </g>
+
+    <!--右脚-->
+    <g>
+        <polygon points="560,1840 660,1840 680,1720 530,1720" style="fill:rgb(36, 108, 140);stroke:purple;stroke-width:1" />
+        <circle cx="648" cy="1894" r="56" stroke="none" fill="#fff"></circle>
+        <polygon points="560,1940 640,1940 640,1840 560,1840" style="fill:#fff;stroke:none;stroke-width:1" />
+    </g>
+
+    <!--身体-->
+    <ellipse cx="500" cy="360" rx="560" ry="600" style="fill:yellow;"></ellipse>
+    <ellipse cx="500" cy="1160" rx="548" ry="600" style="fill:rgb(36, 108, 140);"></ellipse>
+    <rect x="-50" y="220" rx="0" ry="0" width="1098" height="1038" stroke="none" fill="yellow"></rect>
+
+    <!--左眼睛-->
+    <mask id="model">
+    <circle cx="260" cy="180" r="136" fill="yellow" class="eyeIn"></circle>
+    </mask>
+    <circle cx="64" cy="180" r="136" fill="#fff" mask="url(#model)" class="eyeIn"></circle>
+
+    <mask id="model2">
+        <circle cx="450" cy="180" r="110" fill="yellow" class="eyeIn"></circle>
+    </mask>
+    <circle cx="406" cy="180" r="110" fill="#fff" mask="url(#model2)" class="eyeIn"></circle>
+
+    <rect  x="180" y="60" rx="0" ry="0" width="258" height="260" stroke="#fff" fill="#fff"></rect>
+
+    <defs>
+        <filter id="f1" x="-6%" y="-4%" width="120%" height="120%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="6" />
+            <feOffset result="offOut" in="SourceGraphic" dx="6" dy="20" />
+            <feColorMatrix result="matrixOut" in="offOut" type="matrix"
+                           values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" />
+            <feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="8" />
+            <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+        </filter>
+    </defs>
+    <circle cx="320" cy="180" r="180" stroke="#d6d7d1" fill="none" stroke-width="26" filter="url(#f1)" class="eye"></circle>
+    <!--瞳孔-->
+    <circle cx="320" cy="180" r="60" stroke="#000" fill="#8c4f07" stroke-width="6" class="eye"></circle>
+    <!--眼珠-->
+    <circle cx="320" cy="180" r="30" stroke="none" fill="#000" stroke-width="6" class="eye"></circle>
+    <!--眼角-->
+    <circle cx="314" cy="152" r="10" stroke="none" fill="#fff" stroke-width="6" class="eye"></circle>
+    <circle cx="286" cy="76" r="30" stroke="none" fill="#fff" stroke-width="6" class="eye"></circle>
+
+
+    <!--右眼睛-->
+    <g id="rightEye">
+        <!--左白边-->
+        <mask id="model3">
+            <circle cx="600" cy="180" r="106" fill="yellow" class="eyeIn"></circle>
+        </mask>
+        <circle cx="530" cy="180" r="106" fill="#fff" mask="url(#model3)" class="eyeIn"></circle>
+        <!--右白边-->
+        <circle cx="740" cy="188" r="128" fill="#fff" class="eyeIn"></circle>
+        <!--中白边-->
+        <rect  x="550" y="58" rx="0" ry="0" width="258" height="260" stroke="#fff" fill="#fff"></rect>
+
+        <defs>
+            <filter id="f2" x="-6%" y="-4%" width="120%" height="120%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="6" />
+                <feOffset result="offOut" in="SourceGraphic" dx="6" dy="20" />
+                <feColorMatrix result="matrixOut" in="offOut" type="matrix"
+                               values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" />
+                <feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="8" />
+                <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+            </filter>
+        </defs>
+        <circle cx="684" cy="180" r="180" stroke="#d6d7d1" fill="none" stroke-width="26" filter="url(#f2)" class="eye"></circle>
+        <!--眼镜带-->
+        <defs>
+            <clipPath id="myClip">
+                <circle cx="-8" cy="168" r="136" fill="#fff" class="eyeIn"></circle>
+            </clipPath>
+        </defs>
+
+        <g id="shape3">
+        <rect x="-42" y="136" width="246" height="60" stroke="none" fill="#000" clip-path="url(#myClip)"></rect>
+        </g>
+
+        <use xlink:href="#shape3" x="0" y="20" width="246" style="fill: #000;"></use>
+
+        <!--<use xlink:href="#shape3" x="10" y="40" width="246" style="fill: #000;"></use>-->
+
+        <use xlink:href="#shape3" x="920" y="24" width="246" style="fill: #000;"></use>
+
+        <use xlink:href="#shape3" x="920" y="4" width="246" style="fill: #000;"></use>
+
+
+        <!--<circle cx="-8" cy="168" r="56" fill="#fff" class="eyeIn"></circle>-->
+        <!--瞳孔-->
+        <circle cx="680" cy="180" r="60" stroke="#000" fill="#8c4f07" stroke-width="6" class="eye"></circle>
+        <!--眼珠-->
+        <circle cx="680" cy="180" r="30" stroke="none" fill="#000" stroke-width="6" class="eye"></circle>
+        <!--眼角-->
+        <circle cx="676" cy="152" r="10" stroke="none" fill="#fff" stroke-width="6" class="eye"></circle>
+        <circle cx="650" cy="60" r="20" stroke="none" fill="#fff" stroke-width="6" class="eye"></circle>
+    </g>
+
+
+    <!--嘴巴-->
+    <g>
+
+
+        <!--嘴巴-->
+
+        <!--<mask id="model4">-->
+            <!--<circle cx="500" cy="520" r="160" fill="#63112a" x="80" y="80"></circle>-->
+            <!--<circle cx="480" cy="420" r="170" fill="#000" x="80" y="80"/>-->
+        <!--</mask>-->
+        <!--<circle cx="500" cy="520" r="160" fill="#63112a" x="80" y="80" mask="url(#model4)" />-->
+        <mask id="model4">
+            <circle cx="500" cy="560" r="140" fill="#63112a" x="60" y="60"></circle>
+            <circle cx="440" cy="320" r="180" fill="#000" x="60" y="60"></circle>
+        </mask>
+
+        <circle cx="480" cy="520" r="160" fill="#63112a" x="60" y="60" mask="url(#model4)"></circle>
+
+        <!--牙齿-->
+
+        <g id="whiteYa">
+            <rect x="400" y="498" rx="10" ry="10" width="96" height="80" stroke="none" fill="#fff" class="whiteYa"></rect>
+
+            <rect x="470" y="490" rx="10" ry="10" width="96" height="80" stroke="none" fill="#fff" class="whiteYa" transform="rotate(-24,500,510)"></rect>
+
+            <!--<rect x="410" y="580" rx="10" ry="10" width="110" height="86" stroke="none" fill="#fff" class="whiteYa" transform="rotate(10,410,578)"></rect>-->
+
+            <!--<rect x="494" y="592" rx="10" ry="10" width="80" height="80" stroke="none" fill="#fff" class="whiteYa" transform="rotate(-4,500,580)"></rect>-->
+        </g>
+
+        <!--<use xlink:href="#whiteYa" x="80" y="6" width="80" style="fill: #fff;"></use>-->
+
+        <!--<defs>-->
+            <!--<clipPath id="clipPath1">-->
+                <!--<rect x="436" y="480" rx="10" ry="10" width="120" height="50" stroke="none" fill="#000"></rect>-->
+            <!--</clipPath>-->
+        <!--</defs>-->
+
+        <!--<circle cx="440" cy="500" r="40" fill="#fff" class="yaPath" clip-path="url(#clipPath1)" transform="rotate(-90,540,520)"/>-->
+
+    </g>
+
+    <!--衣服  stroke="#fff" stroke-dasharray="5,5" stroke-width="4"-->
+    <g class="clothes">
+
+
+
+        <!--口袋-->
+
+        <!--两圆组合，然后加上外边框，但最上面的边框因为是组合图形，所以缺失，只能用曲线补上边框条-->
+
+        <defs>
+            <filter id="f1" x="0" y="0" width="200%" height="200%">
+                <feOffset result="offOut" in="SourceGraphic" dx="20" dy="20" />
+                <feColorMatrix result="matrixOut" in="offOut" type="matrix"
+                               values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" />
+                <feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="10" />
+                <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+            </filter>
+        </defs>
+
+
+        <circle cx="520" cy="1460" r="120" stroke-width="2" fill="rgb(36, 108, 140)" filter="url(#f1)" stroke="#fff" stroke-width="2" stroke-dasharray="10,10"/>
+        <circle cx="524" cy="1340" r="120" stroke-width="2" fill="rgb(36, 108, 140)" />
+        <path d="M420,1390 C490,1480 530,1480 630,1380" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="10,10"></path>
+
+        <!--衣服周围-->
+
+        <defs>
+            <filter id="f2" x="-6%" y="-4%" width="100%" height="100%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="6" />
+                <feOffset result="offOut" in="SourceGraphic" dx="6" dy="20" />
+                <feColorMatrix result="matrixOut" in="offOut" type="matrix"
+                               values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" />
+                <feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="8" />
+                <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+            </filter>
+        </defs>
+        <polygon points="280 1030,280 1260,770 1260,770 1030" fill="rgb(36, 108, 140)" filter="url(#f2)" />
+
+        <!--<path stroke-dasharray="5,5" d="M5 20 l215 0" fill="none" stroke="black" stroke-width="4"/>-->
+        <g fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="10,10">
+            <!--直线-->
+            <line x1="740" y1="1050" x2="310" y2="1050"></line>
+            <line x1="310" y1="1050" x2="310" y2="1270"></line>
+            <line x1="740" y1="1050" x2="740" y2="1270"></line>
+
+            <!--折线 用路径画曲线(二次贝塞尔)-->
+            <path d="M150,1380 C220,1400 260,1400 310,1240"></path>
+            <path d="M740,1260 C790,1420 820,1420 880,1430"></path>
+        </g>
+
+
+        <!-- 衣服带子 -->
+        <!-- 左 -->
+        <g>
+        <polygon points="17,944 460,944 460,844 17,844" style="fill:rgb(36, 108, 140);stroke:purple;stroke-width:1" transform="rotate(24,-100,806)"/>
+        <circle cx="310" cy="1080" r="24" stroke="none" fill="#000" />
+        <rect x="296" y="1076" rx="10" ry="10" width="30" height="10" stroke="red" fill="rgb(36, 108, 140)" />
+        <rect x="306" y="1066" rx="10" ry="10" width="10" height="30" stroke="red" fill="rgb(36, 108, 140)" />
+        <polygon points="-20,862 28,940 22,838" style="fill:rgb(36, 108, 140);stroke:none;stroke-width:1" transform="rotate(26,-90,800)"/>
+        </g>
+
+        <!-- 右 -->
+        <g>
+        <polygon points="480,1440 880,1440 880,1340 480,1340" style="fill:rgb(36, 108, 140);stroke:purple;stroke-width:1" transform="rotate(-24,-100,810)"/>
+        <circle cx="712" cy="1080" r="24" stroke="none" fill="#000" />
+        <rect x="698" y="1076" rx="10" ry="10" width="30" height="10" stroke="red" fill="rgb(36, 108, 140)" />
+        <rect x="708" y="1066" rx="10" ry="10" width="10" height="30" stroke="red" fill="rgb(36, 108, 140)" />
+        <polygon points="830,1366 878,1444 912,1344" style="fill:rgb(36, 108, 140);stroke:none;stroke-width:1" transform="rotate(-23,-178,780)"/>
+        </g>
+
+
+
+    </g>
+
+
+
+
+
+
+
+</svg>
+</body>
+</html>
